@@ -42,11 +42,11 @@ El logo es «api» en Poppins ExtraBold convertido a trazos. Los archivos están
 
 ## Enlace directo a un vídeo
 
-Añade `#v=` y el id al final de la dirección, por ejemplo `tudominio.com/#v=sirpita`. Sirve para mandar un vídeo concreto por WhatsApp.
+Añade `#v=` y el id al final de la dirección, por ejemplo `apiagencia.com/#v=sirpita`. Sirve para mandar un vídeo concreto por WhatsApp.
 
 ## Publicar cambios
 
-Web: https://rodrigomatiasherbasprado-prog.github.io/api-web/
+Web: https://apiagencia.com/
 Repositorio: https://github.com/rodrigomatiasherbasprado-prog/api-web
 
 La web se publica sola con GitHub Pages cada vez que se sube un cambio a la rama `main`. El proceso está en `.github/workflows/publicar.yml` y solo publica la carpeta `sitio/`. Tarda uno o dos minutos. Desde `web/portfolio/`:
@@ -59,7 +59,10 @@ git push
 
 El historial de git está en `~/.api-web.git`, fuera de iCloud, para que no se corrompa. En otro ordenador basta con clonar el repositorio. Los vídeos originales no están en el repositorio: `preparar_media.sh` los toma del proyecto completo.
 
+## Dominio
+
+`apiagencia.com` está comprado en Cloudflare, con renovación anual. Sus registros DNS apuntan a GitHub Pages y deben quedarse en «DNS only», sin proxy.
+
 ## Pendientes
 
 - Revisa los textos del caso Sirpita y añade los resultados reales: el bloque está comentado en `sitio/trabajos/lotes-sirpita.html`.
-- Con el dominio definitivo, cambia la dirección de `og:url` y `og:image` en `sitio/index.html`.
