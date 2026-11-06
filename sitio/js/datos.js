@@ -2,7 +2,7 @@
 
 window.API_CONFIG = {
   // WhatsApp con código de país y sin espacios ni signos.
-  whatsapp: '59161844664',
+  whatsapp: '59157756942',
   mensaje: 'Hola, vi su portfolio y quiero más información.',
 };
 
