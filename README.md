@@ -42,7 +42,18 @@ Añade `#v=` y el id al final de la dirección, por ejemplo `tudominio.com/#v=si
 
 ## Publicar cambios
 
-La web se publica sola con GitHub Pages cada vez que se sube un cambio a la rama `main`. El proceso está en `.github/workflows/publicar.yml` y solo publica la carpeta `sitio/`. Tarda uno o dos minutos.
+Web: https://rodrigomatiasherbasprado-prog.github.io/api-web/
+Repositorio: https://github.com/rodrigomatiasherbasprado-prog/api-web
+
+La web se publica sola con GitHub Pages cada vez que se sube un cambio a la rama `main`. El proceso está en `.github/workflows/publicar.yml` y solo publica la carpeta `sitio/`. Tarda uno o dos minutos. Desde `web/portfolio/`:
+
+```bash
+git add -A
+git commit -m "Describe el cambio"
+git push
+```
+
+El historial de git está en `~/.api-web.git`, fuera de iCloud, para que no se corrompa. En otro ordenador basta con clonar el repositorio. Los vídeos originales no están en el repositorio: `preparar_media.sh` los toma del proyecto completo.
 
 ## Pendientes
 
