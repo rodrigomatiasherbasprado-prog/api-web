@@ -36,6 +36,10 @@ Si ejecutas el script sin `SOLO`, vuelve a generar todos los vídeos.
 
 El script solo reduce tamaño y quita metadatos. No aplica filtros ni retoque de color.
 
+## Logo
+
+El logo es «api» en Poppins ExtraBold convertido a trazos. Los archivos están en `branding/logo-api-negro.svg` y `branding/logo-api-blanco.svg`. En la web va dentro del HTML para que tome el color de la barra.
+
 ## Enlace directo a un vídeo
 
 Añade `#v=` y el id al final de la dirección, por ejemplo `tudominio.com/#v=sirpita`. Sirve para mandar un vídeo concreto por WhatsApp.
@@ -57,7 +61,5 @@ El historial de git está en `~/.api-web.git`, fuera de iCloud, para que no se c
 
 ## Pendientes
 
-- Confirma el frente del Lote F de Sirpita: el vídeo y el plano dicen 20,02 m, y el anuncio 19,92 m.
-- Cambia el logo de texto por el archivo original.
 - Revisa los textos del caso Sirpita y añade los resultados reales: el bloque está comentado en `sitio/trabajos/lotes-sirpita.html`.
-- Con el dominio definitivo, añade una imagen para compartir (`og:image`) en `sitio/index.html`.
+- Con el dominio definitivo, cambia la dirección de `og:url` y `og:image` en `sitio/index.html`.

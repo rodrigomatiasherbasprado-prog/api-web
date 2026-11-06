@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), 'sitio');
 const PUERTO = 8096;
-const TIPOS = {'.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.jpg': 'image/jpeg', '.mp4': 'video/mp4'};
+const TIPOS = {'.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.jpg': 'image/jpeg', '.mp4': 'video/mp4', '.svg': 'image/svg+xml', '.png': 'image/png', '.txt': 'text/plain; charset=utf-8'};
 
 createServer((req, res) => {
   let ruta;
