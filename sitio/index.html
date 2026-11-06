@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>API · Agencia de publicidad e identidad en Cochabamba</title>
+<meta name="description" content="Portfolio de API: grabación con drone para inmobiliarias y edición de vídeo para marcas en Cochabamba, Bolivia.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="API · Tu marca, en vídeo.">
+<meta property="og:description" content="Grabación con drone y edición de vídeo para marcas en Cochabamba, Bolivia.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#trabajos">Saltar a los trabajos</a>
+
+<header class="barra barra-flotante">
+  <a class="logo" href="#inicio" aria-label="API, inicio">api</a>
+  <nav class="barra-enlaces" aria-label="Principal">
+    <a href="#trabajos">Trabajos</a>
+    <a href="#servicios">Servicios</a>
+    <a class="boton boton-claro" href="#contacto">Escríbenos</a>
+  </nav>
+</header>
+
+<main>
+  <section class="portada" id="inicio" data-historias>
+    <div class="historia-escena">
+      <button type="button" class="historia-abrir"></button>
+      <div class="historia-barras" role="group" aria-label="Elegir vídeo"></div>
+    </div>
+    <div class="portada-contenido">
+      <div class="historia-controles">
+        <button type="button" class="historia-rotulo etiqueta">
+          <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.5v13l11-6.5z"></path></svg>
+          <span></span>
+        </button>
+        <button type="button" class="historia-pausa" aria-label="Pausar los vídeos">
+          <svg class="icono-pausa" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 2h3v12H4zM9 2h3v12H9z"></path></svg>
+          <svg class="icono-seguir" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.5v13l11-6.5z"></path></svg>
+        </button>
+      </div>
+      <h1>Tu marca,<br>en vídeo.</h1>
+      <p>Grabación con drone y edición de vídeo en Cochabamba, Bolivia.</p>
+      <div class="portada-botones">
+        <a class="boton boton-claro" data-contacto>WhatsApp</a>
+        <a class="boton boton-linea" href="#trabajos">Ver trabajos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="trabajos">
+    <div class="cabecera">
+      <h2 class="titulo">Trabajos</h2>
+      <div class="filtros" role="group" aria-label="Filtrar trabajos">
+        <button type="button" class="filtro" data-filtro="todo" aria-pressed="true">Todo</button>
+        <button type="button" class="filtro" data-filtro="drone" aria-pressed="false">Drone</button>
+        <button type="button" class="filtro" data-filtro="edicion" aria-pressed="false">Edición</button>
+      </div>
+    </div>
+    <p class="aviso" aria-live="polite" data-aviso-filtro></p>
+    <div class="rejilla" data-rejilla></div>
+    <noscript><p>Activa JavaScript para ver los trabajos, o escríbenos por WhatsApp: <a href="https://wa.me/59161844664">+591 61844664</a></p></noscript>
+  </section>
+
+  <section class="seccion seccion-sin-arriba" id="servicios">
+    <h2 class="titulo cabecera">Servicios</h2>
+    <div class="servicios">
+      <article class="panel panel-inmo">
+        <svg class="icono" aria-hidden="true" viewBox="0 0 48 48"><path d="M7 42V16l14-8v34"></path><path d="M21 42V20l20 8v14"></path><path d="M4 42h40"></path><path d="M13 20v.01M13 27v.01M13 34v.01M29 31v.01M35 33v.01"></path></svg>
+        <div class="panel-texto">
+          <span class="etiqueta">API Inmo</span>
+          <h3>Grabación con drone</h3>
+          <p>Tomas y fotos aéreas y vídeo aéreo editado para agentes, inmobiliarias y proyectos.</p>
+        </div>
+      </article>
+      <article class="panel panel-negro">
+        <svg class="icono" aria-hidden="true" viewBox="0 0 48 48"><rect x="13" y="5" width="22" height="38" rx="5"></rect><path d="M21 18l9 6-9 6z"></path></svg>
+        <div class="panel-texto">
+          <span class="etiqueta">Para cualquier rubro</span>
+          <h3>Edición de vídeo</h3>
+          <p>Reels y TikToks, vídeos de marca, YouTube, eventos, motion graphics y subtítulos.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="seccion seccion-sin-arriba" aria-labelledby="ecosistema">
+    <div class="cabecera">
+      <h2 class="titulo-medio" id="ecosistema">Un ecosistema de marcas</h2>
+      <p>Cada rubro comunica distinto. Por eso API se divide en ramas especializadas.</p>
+    </div>
+    <div class="ramas">
+      <div class="rama">
+        <div class="rama-color rama-inmo"><svg class="icono" aria-hidden="true" viewBox="0 0 48 48"><path d="M7 42V16l14-8v34"></path><path d="M21 42V20l20 8v14"></path><path d="M4 42h40"></path></svg>API Inmo</div>
+        <span class="etiqueta etiqueta-activa">Activa</span>
+      </div>
+      <div class="rama">
+        <div class="rama-color rama-health"><svg class="icono" aria-hidden="true" viewBox="0 0 48 48"><path d="M18 6h12v12h12v12H30v12H18V30H6V18h12z"></path></svg>API Health</div>
+        <span class="etiqueta">Próximamente</span>
+      </div>
+      <div class="rama">
+        <div class="rama-color rama-tech"><svg class="icono" aria-hidden="true" viewBox="0 0 48 48"><rect x="12" y="12" width="24" height="24" rx="4"></rect><rect x="20" y="20" width="8" height="8" rx="1"></rect><path d="M18 5v7M30 5v7M18 36v7M30 36v7M5 18h7M5 30h7M36 18h7M36 30h7"></path></svg>API Tech</div>
+        <span class="etiqueta">Próximamente</span>
+      </div>
+      <div class="rama">
+        <div class="rama-color rama-business"><svg class="icono" aria-hidden="true" viewBox="0 0 48 48"><path d="M10 40V28M24 40V8M38 40V18"></path></svg>API Business</div>
+        <span class="etiqueta">Próximamente</span>
+      </div>
+      <div class="rama">
+        <div class="rama-color rama-commerce"><svg class="icono" aria-hidden="true" viewBox="0 0 48 48"><path d="M5 7h6l5 24h22l4-16H13"></path><path d="M19 41v.01M35 41v.01"></path></svg>API Commerce</div>
+        <span class="etiqueta">Próximamente</span>
+      </div>
+      <div class="rama">
+        <div class="rama-color rama-food"><svg class="icono" aria-hidden="true" viewBox="0 0 48 48"><path d="M6 22h36c0 10-7 19-18 19S6 32 6 22z"></path><path d="M18 14c0-3 3-3 3-6M28 14c0-3 3-3 3-6"></path></svg>API Food</div>
+        <span class="etiqueta">Próximamente</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre" id="contacto">
+    <h2>¿Grabamos lo tuyo?</h2>
+    <a class="boton boton-claro" data-contacto>Escríbenos por WhatsApp</a>
+    <p><a data-contacto>+591 61844664</a> · Cochabamba, Bolivia</p>
+  </section>
+</main>
+
+<a class="boton fijo-movil oculto" data-contacto>Escríbenos por WhatsApp</a>
+
+<script src="js/datos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
