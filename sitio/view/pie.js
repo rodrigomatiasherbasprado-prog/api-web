@@ -11,8 +11,10 @@ export const Pie = (telefono) => {
     <a class="boton boton-claro boton-grande" data-whatsapp>${ICONOS.whatsapp}Escríbenos por WhatsApp</a>
   </div>
   <a class="ticker" data-whatsapp aria-label="Contáctanos por WhatsApp al ${telefono}">
-    <span class="ticker-pista">${tramo.repeat(6)}</span>
-    <span class="ticker-pista" aria-hidden="true">${tramo.repeat(6)}</span>
+    <span class="ticker-pista">
+      <span class="ticker-grupo">${tramo.repeat(4)}</span>
+      <span class="ticker-grupo" aria-hidden="true">${tramo.repeat(4)}</span>
+    </span>
   </a>
   <div class="pie-legal"><span>© ${new Date().getFullYear()} API · Cochabamba, Bolivia</span><a data-whatsapp>${telefono}</a></div>
 </footer>`;

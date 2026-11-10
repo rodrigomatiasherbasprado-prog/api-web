@@ -27,7 +27,7 @@ El código está separado en tres partes, como en una app:
 - `CONFIG`: WhatsApp, número visible y cuántos videos se ven antes de «Ver más» (4).
 - `PRECIOS`: los tres paquetes (Sin editar Bs 150, Editado Bs 300, Editado lotes Bs 400) y qué incluye cada uno.
 - `VIDEOS`: solo videos de DRONE. `tipo` es lo que se muestra (Lote, Casa, Edificio, Terreno), `estado` es `editado` o `crudo`.
-- `FONDO_INICIO`: clips de 6 s que pasan de fondo en el inicio (`media/historias/`).
+- `FONDO_INICIO`: fotos aéreas sin edición que pasan de fondo en el inicio (`media/inicio/`).
 - `PALABRAS`: palabras que cambian en el titular.
 - `MARCAS`: logos en blanco con fondo transparente en `media/marcas/`.
 - `RAMAS`: la activa (`activa: true`) sale en negro; el resto, en plomo «Próximamente».
@@ -44,12 +44,12 @@ El código está separado en tres partes, como en una app:
 
 Si ejecutas el script sin `SOLO`, vuelve a generar todos los vídeos. El script solo reduce tamaño y quita metadatos. No aplica filtros ni retoque de color.
 
-## Cambiar los clips del inicio
+## Cambiar las fotos del inicio
 
-Elige archivo y segundo de inicio en `HISTORIAS`, dentro de `preparar_media.sh`, ponlos en `FONDO_INICIO` y ejecuta:
+El inicio pasa fotos aéreas **sin edición** (`media/inicio/`). Elige los archivos en `FOTOS`, dentro de `preparar_media.sh`, ponlos en `FONDO_INICIO` y ejecuta:
 
 ```bash
-SOLO_HISTORIAS=1 bash web/portfolio/preparar_media.sh
+SOLO_FOTOS=1 bash web/portfolio/preparar_media.sh
 ```
 
 ## Logo

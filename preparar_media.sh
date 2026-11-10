@@ -14,23 +14,22 @@ suavizar() {
   python3 web/portfolio/suavizar.py "$1" "$1.tmp.mp4" 9 "$2" && mv "$1.tmp.mp4" "$1"
 }
 
-# Clips de 6 s del inicio a pantalla completa: id | archivo | segundo de inicio.
-# Para rehacer solo estos: SOLO_HISTORIAS=1 bash web/portfolio/preparar_media.sh
-HISTORIAS='
-sirpita|proyectos/alfa-urban-2026-11-03-lotes-sirpita/entrega/lotes-sirpita_v9.mp4|13.2
-supermall|proyectos/alfa-urban-2026-11-05-depa-supermall/entrega/depa-supermall_v6.mp4|1.5
-casa|motion/public/gancho-drone/v3/mansion.mp4|2
+# Fotos del inicio: fotos aéreas originales, sin edición. Solo se reducen a 1600 px y se les quita el GPS.
+# Para rehacer solo estas: SOLO_FOTOS=1 bash web/portfolio/preparar_media.sh
+mkdir -p "$OUT/inicio"
+FOTOS='
+foto-1|brutos/alfa-urban/depa-supermall/DJI_0352.JPG
+foto-2|brutos/alfa-urban/depa-supermall/DJI_0342.JPG
+foto-3|brutos/alfa-urban/lotes-sirpita/DJI_0316.JPG
+foto-4|brutos/alfa-urban/depa-supermall/DJI_0349.JPG
+foto-5|brutos/alfa-urban/lotes-sirpita/DJI_0296.JPG
+foto-6|brutos/alfa-urban/depa-supermall/DJI_0331.JPG
 '
-echo "$HISTORIAS" | while IFS='|' read -r id src inicio; do
+echo "$FOTOS" | while IFS='|' read -r id src; do
   [ -z "$id" ] && continue
-  [ -n "${SOLO:-}" ] && [ "$id" != "$SOLO" ] && continue
-  echo ">> historia $id"
-  ffmpeg -nostdin -v error -y -ss "$inicio" -t 6 -i "$src" -an -map_metadata -1 \
-    -vf "scale=720:-2" -c:v libx264 -preset medium -crf 26 -pix_fmt yuv420p \
-    -movflags +faststart "$OUT/historias/$id.mp4"
-  suavizar "$OUT/historias/$id.mp4" 25
+  ffmpeg -nostdin -v error -y -i "$src" -map_metadata -1 -vf "scale=1600:-2:flags=lanczos" -q:v 7 "$OUT/inicio/$id.jpg"
 done
-[ "${SOLO_HISTORIAS:-}" = 1 ] && { du -sh "$OUT/historias"; echo LISTO; exit 0; }
+[ "${SOLO_FOTOS:-}" = 1 ] && { du -sh "$OUT/inicio"; echo LISTO; exit 0; }
 
 # id | archivo | segundo de inicio del bucle de portada | segundo del póster
 LISTA='

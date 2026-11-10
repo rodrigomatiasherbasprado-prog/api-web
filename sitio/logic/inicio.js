@@ -1,6 +1,6 @@
-// Inicio: clips de fondo que se funden cada 6 s y palabra del titular que cambia.
+// Inicio: fotos aéreas de fondo que se funden y palabra del titular que cambia.
 import {FONDO_INICIO, PALABRAS} from './datos.js';
-import {ahorroDatos, reproducir, ruta, sinMovimiento} from './util.js';
+import {sinMovimiento} from './util.js';
 
 export function iniciarInicio() {
   const fondo = document.querySelector('[data-fondo]');
@@ -11,33 +11,27 @@ export function iniciarInicio() {
   }
   const activo = () => visible && !document.hidden;
 
-  // Fondo
-  const clips = FONDO_INICIO.map((id, i) => {
-    const v = document.createElement('video');
-    v.muted = true; v.loop = true; v.playsInline = true; v.preload = i === 0 ? 'auto' : 'none';
-    v.poster = ruta('posters', id);
-    v.className = 'inicio-clip' + (i === 0 ? ' activo' : '');
-    if (!sinMovimiento && !ahorroDatos && i === 0) v.src = ruta('historias', id);
-    fondo.appendChild(v);
-    return {id, v};
+  // Fondo: fotos que se funden cada 5 s con un acercamiento lento. Cada foto se carga justo antes de mostrarse.
+  const fotos = FONDO_INICIO.map((archivo, i) => {
+    const img = document.createElement('img');
+    img.alt = '';
+    img.decoding = 'async';
+    img.className = 'inicio-foto' + (i === 0 ? ' activa' : '');
+    if (i < 2) img.src = `media/inicio/${archivo}`;
+    fondo.appendChild(img);
+    return {archivo, img};
   });
   let actual = 0;
-  if (!sinMovimiento && !ahorroDatos) {
-    reproducir(clips[0].v);
+  if (!sinMovimiento) {
     setInterval(() => {
-      if (!activo()) { clips[actual].v.pause(); return; }
-      const sig = (actual + 1) % clips.length;
-      const c = clips[sig];
-      if (!c.v.getAttribute('src')) c.v.src = ruta('historias', c.id);
-      c.v.currentTime = 0;
-      reproducir(c.v);
-      c.v.classList.add('activo');
-      clips[actual].v.classList.remove('activo');
-      const anterior = clips[actual].v;
-      setTimeout(() => anterior.pause(), 900);
+      if (!activo()) return;
+      const sig = (actual + 1) % fotos.length;
+      const despues = fotos[(sig + 1) % fotos.length];
+      if (!despues.img.getAttribute('src')) despues.img.src = `media/inicio/${despues.archivo}`;
+      fotos[sig].img.classList.add('activa');
+      fotos[actual].img.classList.remove('activa');
       actual = sig;
-    }, 6000);
-    document.addEventListener('visibilitychange', () => { if (activo()) reproducir(clips[actual].v); });
+    }, 5000);
   }
 
   // Palabra que cambia

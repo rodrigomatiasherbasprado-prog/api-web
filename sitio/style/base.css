@@ -12,7 +12,8 @@
   --suave: cubic-bezier(0.22, 1, 0.36, 1);
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; overflow-x: clip; }
+body { overflow-x: clip; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 html.con-reproductor { overflow: hidden; }
 body {

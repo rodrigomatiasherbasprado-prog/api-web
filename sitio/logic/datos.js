@@ -54,8 +54,8 @@ export const VIDEOS = [
   {id: 'lote-crudo', tipo: 'Lote', lugar: 'Sirpita, Tiquipaya', estado: 'crudo', precio: 150, dura: '1:10', alt: 'Toma aérea en crudo de unos lotes'},
 ];
 
-// Clips de 6 s que pasan de fondo en el inicio (media/historias).
-export const FONDO_INICIO = ['sirpita', 'casa', 'supermall'];
+// Fotos aéreas sin edición que pasan de fondo en el inicio (media/inicio). Sin GPS ni retoque.
+export const FONDO_INICIO = ['foto-1.jpg', 'foto-2.jpg', 'foto-3.jpg', 'foto-4.jpg', 'foto-5.jpg', 'foto-6.jpg'];
 // Palabras que cambian en el titular.
 export const PALABRAS = ['lote', 'casa', 'edificio', 'terreno', 'proyecto'];
 
