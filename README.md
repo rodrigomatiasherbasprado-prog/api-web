@@ -10,31 +10,47 @@ node web/portfolio/servidor.mjs
 
 Luego abre http://localhost:8096
 
-## Cambiar el WhatsApp
+## Cómo está organizado el código
 
-Todos los botones de contacto abren WhatsApp. El número va en `whatsapp`, en `sitio/js/datos.js`, con el código de país y sin espacios. El número visible está escrito en `sitio/index.html` (cierre y aviso `noscript`): cámbialo también ahí.
+El código está separado en tres partes, como en una app:
 
-## Cambiar los vídeos del inicio
+| Carpeta | Qué hay | Cuándo tocarla |
+|---|---|---|
+| `sitio/style/` | Cómo se ve: un CSS por sección (`base`, `cabecera`, `inicio`, `videos`, `precios`, `marcas`, `ramas`, `pie`, `reproductor`) | Colores, tamaños, animaciones |
+| `sitio/view/` | Qué se muestra: una función por sección que devuelve su HTML | Textos fijos y estructura |
+| `sitio/logic/` | Cómo funciona: datos, pestañas, «Ver más», reproductor, WhatsApp, animaciones al hacer scroll | Comportamiento |
 
-`API_HISTORIAS`, en `sitio/js/datos.js`, decide qué trabajos pasan en el inicio y en qué orden. Cada uno necesita su clip de 6 s en `sitio/media/historias/`: elige el archivo y el segundo de inicio en `HISTORIAS`, dentro de `preparar_media.sh`, y ejecuta desde la raíz del proyecto:
+`sitio/index.html` solo carga los estilos y `logic/app.js`, que pinta las vistas y conecta la lógica.
 
-```bash
-SOLO_HISTORIAS=1 bash web/portfolio/preparar_media.sh
-```
+## Lo que se edita a diario: `sitio/logic/datos.js`
 
-## Añadir un trabajo
+- `CONFIG`: WhatsApp, número visible y cuántos videos se ven antes de «Ver más» (4).
+- `PRECIOS`: los tres paquetes (Sin editar Bs 150, Editado Bs 300, Editado lotes Bs 400) y qué incluye cada uno.
+- `VIDEOS`: solo videos de DRONE. `tipo` es lo que se muestra (Lote, Casa, Edificio, Terreno), `estado` es `editado` o `crudo`.
+- `FONDO_INICIO`: clips de 6 s que pasan de fondo en el inicio (`media/historias/`).
+- `PALABRAS`: palabras que cambian en el titular.
+- `MARCAS`: logos en blanco con fondo transparente en `media/marcas/`.
+- `RAMAS`: la activa (`activa: true`) sale en negro; el resto, en plomo «Próximamente».
 
-1. Suma una línea a `LISTA` en `preparar_media.sh` y genera solo ese trabajo desde la raíz del proyecto, cambiando `mi-id` por su `id`:
+## Añadir un video
+
+1. Suma una línea a `LISTA` en `preparar_media.sh` y genera solo ese video desde la raíz del proyecto, cambiando `mi-id` por su `id`:
 
    ```bash
    SOLO=mi-id bash web/portfolio/preparar_media.sh
    ```
 
-2. Copia un bloque en `API_TRABAJOS` de `sitio/js/datos.js`, con el mismo `id`.
+2. Copia un bloque en `VIDEOS` de `sitio/logic/datos.js`, con el mismo `id`.
 
-Si ejecutas el script sin `SOLO`, vuelve a generar todos los vídeos.
+Si ejecutas el script sin `SOLO`, vuelve a generar todos los vídeos. El script solo reduce tamaño y quita metadatos. No aplica filtros ni retoque de color.
 
-El script solo reduce tamaño y quita metadatos. No aplica filtros ni retoque de color.
+## Cambiar los clips del inicio
+
+Elige archivo y segundo de inicio en `HISTORIAS`, dentro de `preparar_media.sh`, ponlos en `FONDO_INICIO` y ejecuta:
+
+```bash
+SOLO_HISTORIAS=1 bash web/portfolio/preparar_media.sh
+```
 
 ## Logo
 

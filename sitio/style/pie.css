@@ -1,0 +1,24 @@
+/* Pie: cierre con llamada a la acción y barra animada «API · Contáctanos · número». */
+.pie { background: var(--negro); color: var(--blanco); }
+.pie-cierre { display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center; padding: clamp(80px, 10vw, 140px) var(--margen) clamp(56px, 7vw, 88px); }
+.pie-cierre h2 { font-weight: 800; font-size: clamp(44px, 8vw, 112px); line-height: 1; letter-spacing: -0.045em; }
+.pie-cierre p { color: var(--tenue); }
+.ticker { display: flex; overflow: hidden; border-block: 1px solid var(--linea); text-decoration: none; padding: 14px 0; }
+.ticker-pista { display: flex; flex: 0 0 auto; animation: ticker 28s linear infinite; }
+.ticker:hover .ticker-pista { animation-play-state: paused; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+.ticker-tramo { display: inline-flex; align-items: center; gap: 22px; padding-right: 22px; font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+.ticker-tramo .logo-svg { height: 18px; width: auto; }
+.ticker-tramo i { width: 6px; height: 6px; border-radius: 50%; background: var(--blanco); opacity: 0.6; }
+.pie-legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 22px var(--margen) calc(22px + env(safe-area-inset-bottom)); font-size: 14px; color: var(--tenue); }
+.pie-legal a { text-decoration: none; }
+.fijo-movil { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 0; }
+  .fijo-movil {
+    position: fixed; left: 16px; right: 16px; bottom: calc(14px + env(safe-area-inset-bottom)); z-index: 15;
+    display: flex; background: var(--negro); color: var(--blanco); border: 1px solid rgba(255,255,255,0.35);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: opacity 0.25s, visibility 0.25s, transform 0.25s;
+  }
+  .fijo-movil.oculto { opacity: 0; visibility: hidden; transform: translateY(12px); }
+}

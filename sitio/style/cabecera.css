@@ -1,0 +1,15 @@
+/* Barra superior: transparente sobre el inicio y negra al bajar. */
+.cabecera {
+  position: fixed; inset: 0 0 auto; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: calc(16px + env(safe-area-inset-top)) var(--margen) 16px; color: var(--blanco);
+  transition: background 0.3s, padding 0.3s, backdrop-filter 0.3s;
+}
+.cabecera.solida { background: rgba(0, 0, 0, 0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding-top: calc(10px + env(safe-area-inset-top)); padding-bottom: 10px; }
+.logo { display: block; text-decoration: none; }
+.logo-svg { height: 38px; width: auto; }
+.menu { display: flex; align-items: center; gap: clamp(16px, 3vw, 36px); font-size: 15px; font-weight: 600; }
+.menu > a:not(.boton) { text-decoration: none; position: relative; padding: 10px 0; }
+.menu > a:not(.boton)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 4px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 0.35s var(--suave); }
+.menu > a:not(.boton):hover::after { transform: scaleX(1); transform-origin: left; }
+@media (max-width: 520px) { .menu .boton span { display: none; } .menu .boton { padding: 8px 12px; } }

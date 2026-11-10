@@ -1,0 +1,49 @@
+/* Videos: pestañas con fondo que se desliza, explicación de precios y tarjetas. */
+.pestanas { position: relative; display: inline-flex; padding: 6px; border-radius: 999px; background: var(--gris-claro); margin-bottom: 24px; }
+.pestanas-fondo { position: absolute; top: 6px; bottom: 6px; left: 0; border-radius: 999px; background: var(--negro); transition: transform 0.45s var(--suave), width 0.45s var(--suave); }
+.pestana { position: relative; z-index: 1; min-height: 46px; padding: 0 clamp(18px, 2.4vw, 30px); border-radius: 999px; font-size: 15px; font-weight: 600; color: var(--gris); transition: color 0.3s; }
+.pestana[aria-selected="true"] { color: var(--blanco); }
+
+.explica { margin-bottom: clamp(24px, 3vw, 36px); }
+.explica > * { animation: aparece 0.55s var(--suave) both; }
+@keyframes aparece { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.explica-caja { display: flex; flex-direction: column; gap: 8px; padding: clamp(24px, 3vw, 36px) clamp(24px, 3vw, 40px); border-radius: var(--radio); background: var(--gris-claro); }
+.explica-negra { background: var(--negro); color: var(--blanco); }
+.explica-etiqueta { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6; }
+.explica-caja h3 { font-size: clamp(22px, 2.2vw, 30px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; }
+.explica-caja p { opacity: 0.8; max-width: 760px; }
+.seccion-texto b { color: var(--negro); font-weight: 700; }
+
+.rejilla { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
+.rejilla.animar .tarjeta { animation: aparece 0.6s var(--suave) both; animation-delay: calc(var(--i) * 70ms); }
+.tarjeta { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.tarjeta-marco { position: relative; display: block; overflow: hidden; border-radius: var(--radio); background: var(--negro); color: var(--blanco); text-align: left; isolation: isolate; }
+.tarjeta-marco img { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; transition: transform 0.8s var(--suave); }
+.tarjeta-marco:hover img { transform: scale(1.05); }
+.tarjeta-vista { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.tarjeta-marco img { position: relative; z-index: -1; }
+.tarjeta-marco::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 52%, rgba(0,0,0,0.85) 100%); pointer-events: none; }
+.insignia { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+.insignia-editado { background: var(--blanco); color: var(--negro); }
+.insignia-crudo { background: rgba(0,0,0,0.55); color: var(--blanco); border: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.tarjeta-play { position: absolute; top: 50%; left: 50%; z-index: 1; width: 60px; height: 60px; margin: -30px 0 0 -30px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform 0.35s var(--suave), background 0.3s; }
+.tarjeta-play .ico { width: 18px; height: 18px; margin-left: 3px; }
+.tarjeta-marco:hover .tarjeta-play { transform: scale(1.12); background: var(--blanco); color: var(--negro); }
+.tarjeta-pie { position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 1; display: flex; flex-direction: column; }
+.tarjeta-kicker { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.8; }
+.tarjeta-titulo { font-size: clamp(22px, 2vw, 28px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+.tarjeta-lugar { font-size: 14px; opacity: 0.8; }
+.tarjeta-accion { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.tarjeta-precio { white-space: nowrap; font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+.ver-mas-caja { display: flex; justify-content: center; margin-top: clamp(28px, 3.5vw, 44px); }
+
+@media (max-width: 1000px) { .rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .pestanas { display: flex; }
+  .pestana { flex: 1 1 0; padding: 0 8px; }
+    .rejilla { gap: 14px 10px; }
+  .tarjeta-pie { left: 12px; right: 12px; bottom: 10px; }
+  .tarjeta-play { width: 48px; height: 48px; margin: -24px 0 0 -24px; }
+  .tarjeta-accion { flex-direction: column; align-items: stretch; }
+  .tarjeta-accion .boton { padding: 8px 10px; font-size: 13px; }
+}
