@@ -1,5 +1,5 @@
 /* Precios: tres planes, el editado destacado en negro. */
-.planes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 1.8vw, 24px); align-items: stretch; }
+.planes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 1.8vw, 24px); align-items: stretch; }
 .plan { position: relative; display: flex; flex-direction: column; gap: 10px; padding: clamp(26px, 3vw, 40px); border-radius: var(--radio); background: var(--blanco); border: 1px solid #E4E4E7; transition: transform 0.4s var(--suave), box-shadow 0.4s; }
 .plan:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(0,0,0,0.1); }
 .plan-destacado { background: var(--negro); color: var(--blanco); border-color: var(--negro); }
@@ -13,4 +13,4 @@
 .plan-lista .ico { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2.6; }
 .plan .boton { margin-top: auto; }
 .pago { margin-top: 24px; text-align: center; color: var(--gris); font-size: 15px; }
-@media (max-width: 900px) { .planes { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) { .planes { grid-template-columns: minmax(0, 1fr); } }

@@ -21,22 +21,12 @@ export const PRECIOS = [
     ],
   },
   {
-    id: 'editado', nombre: 'Editado', precio: 300, para: 'Casas, departamentos y edificios', destacado: true,
+    id: 'editado', nombre: 'Editado', precio: 300, para: 'Casas, departamentos, edificios y lotes', destacado: true,
     resumen: 'La producción completa: del vuelo al video terminado, listo para tus anuncios y redes.',
     incluye: [
       'Planificación de tomas y grabación con DRONE',
       'Edición profesional con textos y gráficos animados',
       'Video en formato vertical, listo para publicar',
-      'Fotografías aéreas editadas',
-    ],
-  },
-  {
-    id: 'lotes', nombre: 'Editado · Lotes', precio: 400, para: 'Lotes, loteos y terrenos',
-    resumen: 'La producción completa pensada para vender lotes: que el cliente entienda el terreno de un vistazo.',
-    incluye: [
-      'Todo lo del paquete Editado',
-      'Ubicación, medidas y entorno explicados en el video',
-      'Lotes resaltados sobre la toma aérea',
       'Fotografías aéreas editadas',
     ],
   },
@@ -46,7 +36,7 @@ export const PAGO = '50 % para agendar y 50 % después de la grabación.';
 // Videos. estado: 'editado' o 'crudo'. precio: el del paquete que muestra.
 // Archivos en media/videos, media/loops y media/posters con el mismo id (los prepara preparar_media.sh).
 export const VIDEOS = [
-  {id: 'sirpita', tipo: 'Lote', lugar: 'Sirpita, Tiquipaya', estado: 'editado', precio: 400, dura: '1:10', alt: 'Toma aérea de lotes con su contorno marcado'},
+  {id: 'sirpita', tipo: 'Lote', lugar: 'Sirpita, Tiquipaya', estado: 'editado', precio: 300, dura: '1:10', alt: 'Toma aérea de lotes con su contorno marcado'},
   {id: 'supermall', tipo: 'Edificio', lugar: 'Av. Blanco Galindo', estado: 'editado', precio: 300, dura: '0:56', alt: 'Toma aérea de un edificio de departamentos'},
   {id: 'casa', tipo: 'Casa', lugar: 'Cochabamba', estado: 'crudo', precio: 150, dura: '0:26', alt: 'Toma aérea de una casa con piscina y cancha'},
   {id: 'terreno', tipo: 'Terreno', lugar: 'Sacaba', estado: 'crudo', precio: 150, dura: '0:22', alt: 'Toma cenital de un terreno entre casas'},

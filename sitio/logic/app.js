@@ -13,6 +13,7 @@ import {iniciarInicio} from './inicio.js';
 import {iniciarVideos} from './videos.js';
 import {iniciarReproductor} from './reproductor.js';
 import {iniciarAnimaciones} from './animaciones.js';
+import {iniciarMarcas} from './marcas.js';
 
 const app = document.querySelector('#app');
 app.innerHTML = [
@@ -34,6 +35,7 @@ iniciarReproductor();
 iniciarInicio();
 iniciarVideos();
 iniciarAnimaciones();
+iniciarMarcas();
 document.documentElement.classList.add('listo');
 
 // Enlace a una sección (apiagencia.com/#precios): las vistas se pintan después de cargar, así que se baja aquí.
