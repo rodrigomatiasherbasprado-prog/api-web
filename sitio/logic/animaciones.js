@@ -1,5 +1,5 @@
 // Animaciones al hacer scroll, barra superior y botón fijo del teléfono.
-import {sinMovimiento} from './util.js';
+import {sinMovimiento} from './util.js?v=202611121320';
 
 export function iniciarAnimaciones() {
   const elementos = document.querySelectorAll('[data-aparece]');

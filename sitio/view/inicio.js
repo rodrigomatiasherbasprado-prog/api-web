@@ -1,4 +1,4 @@
-import {ICONOS} from './iconos.js';
+import {ICONOS} from './iconos.js?v=202611121320';
 
 // Inicio: clips de DRONE de fondo y titular con la palabra que cambia.
 export const Inicio = ({palabras}) => `

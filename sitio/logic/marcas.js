@@ -3,7 +3,7 @@
 // superaba el tamaño que Safari puede pintar: se quedaba en negro, se trababa y al reiniciar saltaba.
 // Ahora: un solo grupo medido de verdad, copiado solo las veces necesarias para cubrir la pantalla, y movido
 // píxel a píxel; cuando avanza un grupo entero vuelve al inicio sin que se note. Se para fuera de pantalla.
-import {sinMovimiento} from './util.js';
+import {sinMovimiento} from './util.js?v=202611121320';
 
 const VELOCIDAD = 42; // píxeles por segundo
 

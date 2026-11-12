@@ -1,4 +1,4 @@
-import {ICONOS} from './iconos.js';
+import {ICONOS} from './iconos.js?v=202611121320';
 
 export const Ramas = (ramas) => `
 <section class="seccion seccion-sin-arriba" id="ramas" aria-labelledby="titulo-ramas">

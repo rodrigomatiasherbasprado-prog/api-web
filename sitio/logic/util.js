@@ -1,5 +1,5 @@
 // Ayudas comunes.
-import {CONFIG} from './datos.js';
+import {CONFIG} from './datos.js?v=202611121320';
 
 export const sinMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 export const ahorroDatos = Boolean((navigator.connection || {}).saveData);

@@ -1,7 +1,7 @@
 // Reproductor a pantalla completa con flechas para pasar de video y botón de WhatsApp.
-import {PRECIOS, VIDEOS} from './datos.js';
-import {bs, mensajeVideo, nombreEstado, reproducir, ruta, tituloVideo} from './util.js';
-import {prepararEnlace} from './contacto.js';
+import {PRECIOS, VIDEOS} from './datos.js?v=202611121320';
+import {bs, mensajeVideo, nombreEstado, reproducir, ruta, tituloVideo} from './util.js?v=202611121320';
+import {prepararEnlace} from './contacto.js?v=202611121320';
 
 let dialogo;
 let video;

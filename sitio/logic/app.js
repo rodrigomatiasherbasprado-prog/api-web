@@ -1,19 +1,19 @@
 // Arranque: pinta las vistas con los datos y conecta la lógica de cada sección.
-import {CONFIG, MARCAS, PAGO, PALABRAS, PRECIOS, RAMAS} from './datos.js';
-import {Cabecera} from '../view/cabecera.js';
-import {Inicio} from '../view/inicio.js';
-import {Videos} from '../view/videos.js';
-import {Precios} from '../view/precios.js';
-import {Marcas} from '../view/marcas.js';
-import {Ramas} from '../view/ramas.js';
-import {Pie} from '../view/pie.js';
-import {FijoMovil, Reproductor} from '../view/reproductor.js';
-import {prepararContacto} from './contacto.js';
-import {iniciarInicio} from './inicio.js';
-import {iniciarVideos} from './videos.js';
-import {iniciarReproductor} from './reproductor.js';
-import {iniciarAnimaciones} from './animaciones.js';
-import {iniciarMarcas} from './marcas.js';
+import {CONFIG, MARCAS, PAGO, PALABRAS, PRECIOS, RAMAS} from './datos.js?v=202611121320';
+import {Cabecera} from '../view/cabecera.js?v=202611121320';
+import {Inicio} from '../view/inicio.js?v=202611121320';
+import {Videos} from '../view/videos.js?v=202611121320';
+import {Precios} from '../view/precios.js?v=202611121320';
+import {Marcas} from '../view/marcas.js?v=202611121320';
+import {Ramas} from '../view/ramas.js?v=202611121320';
+import {Pie} from '../view/pie.js?v=202611121320';
+import {FijoMovil, Reproductor} from '../view/reproductor.js?v=202611121320';
+import {prepararContacto} from './contacto.js?v=202611121320';
+import {iniciarInicio} from './inicio.js?v=202611121320';
+import {iniciarVideos} from './videos.js?v=202611121320';
+import {iniciarReproductor} from './reproductor.js?v=202611121320';
+import {iniciarAnimaciones} from './animaciones.js?v=202611121320';
+import {iniciarMarcas} from './marcas.js?v=202611121320';
 
 const app = document.querySelector('#app');
 app.innerHTML = [

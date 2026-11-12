@@ -65,6 +65,12 @@ Añade `#v=` y el id al final de la dirección, por ejemplo `apiagencia.com/#v=s
 Web: https://apiagencia.com/
 Repositorio: https://github.com/rodrigomatiasherbasprado-prog/api-web
 
+Antes de subir, pon una versión nueva para que los celulares no muestren archivos viejos guardados:
+
+```bash
+python3 web/portfolio/version.py
+```
+
 La web se publica sola con GitHub Pages cada vez que se sube un cambio a la rama `main`. El proceso está en `.github/workflows/publicar.yml` y solo publica la carpeta `sitio/`. Tarda uno o dos minutos. Desde `web/portfolio/`:
 
 ```bash

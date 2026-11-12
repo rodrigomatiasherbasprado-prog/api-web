@@ -1,5 +1,5 @@
-import {ICONOS} from './iconos.js';
-import {bs} from '../logic/util.js';
+import {ICONOS} from './iconos.js?v=202611121320';
+import {bs} from '../logic/util.js?v=202611121320';
 
 export const Precios = (precios, pago) => `
 <section class="seccion seccion-gris" id="precios">
