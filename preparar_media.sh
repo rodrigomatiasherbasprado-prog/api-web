@@ -39,6 +39,11 @@ casa|motion/public/gancho-drone/v3/mansion.mp4|6|8
 terreno|motion/public/gancho-drone/v3/sacaba.mp4|4|6
 edificio-crudo|motion/public/gancho-drone/v6/supermall-completo.mp4|8|10
 lote-crudo|motion/public/gancho-drone/v6/lotes-completo.mp4|10|12
+quillacollo|proyectos/oscar-urkupina-2026-11-09-lotes-quillacollo/entrega/lotes-quillacollo_v12.mp4|52|55
+reale|proyectos/reale-2026-11-14-casa-blanco-galindo/entrega/casa-blanco-galindo_v3.mp4|17|20
+quillacollo-crudo|motion/public/produccion/quillacollo/crudo.mp4|8|9
+reale-crudo|motion/public/produccion/reale/crudo.mp4|6|8
+edificio-estadio|motion/public/agencia-diego/aereo.mp4|2|3
 '
 
 echo "$LISTA" | while IFS='|' read -r id src loop poster; do

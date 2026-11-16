@@ -1,9 +1,9 @@
 // Sección de videos: pestañas, explicación de precios, 4 videos y «Ver más».
-import {CONFIG, VIDEOS} from './datos.js?v=202611121320';
-import {conHover, reproducir, ruta, sinMovimiento} from './util.js?v=202611121320';
-import {Explica, Tarjeta} from '../view/videos.js?v=202611121320';
-import {prepararContacto} from './contacto.js?v=202611121320';
-import {abrirVideo} from './reproductor.js?v=202611121320';
+import {CONFIG, VIDEOS} from './datos.js?v=202611160207';
+import {conHover, reproducir, ruta, sinMovimiento} from './util.js?v=202611160207';
+import {Explica, Tarjeta} from '../view/videos.js?v=202611160207';
+import {prepararContacto} from './contacto.js?v=202611160207';
+import {abrirVideo} from './reproductor.js?v=202611160207';
 
 const estado = {filtro: 'todos', abierto: false};
 

@@ -42,6 +42,11 @@ export const VIDEOS = [
   {id: 'terreno', tipo: 'Terreno', lugar: 'Sacaba', estado: 'crudo', precio: 150, dura: '0:22', alt: 'Toma cenital de un terreno entre casas'},
   {id: 'edificio-crudo', tipo: 'Edificio', lugar: 'Av. Blanco Galindo', estado: 'crudo', precio: 150, dura: '0:56', alt: 'Toma aérea en crudo de un edificio'},
   {id: 'lote-crudo', tipo: 'Lote', lugar: 'Sirpita, Tiquipaya', estado: 'crudo', precio: 150, dura: '1:10', alt: 'Toma aérea en crudo de unos lotes'},
+  {id: 'quillacollo', tipo: 'Lote', lugar: 'Quillacollo', estado: 'editado', precio: 300, dura: '1:39', alt: 'Toma aérea de tres lotes con su contorno marcado'},
+  {id: 'reale', tipo: 'Casa', lugar: 'Av. Blanco Galindo', estado: 'editado', precio: 300, dura: '0:56', alt: 'Toma aérea de una casa con espacios comerciales sobre la avenida'},
+  {id: 'quillacollo-crudo', tipo: 'Lote', lugar: 'Quillacollo', estado: 'crudo', precio: 150, dura: '1:39', alt: 'Toma aérea en crudo de unos lotes entre casas'},
+  {id: 'reale-crudo', tipo: 'Casa', lugar: 'Av. Blanco Galindo', estado: 'crudo', precio: 150, dura: '0:56', alt: 'Toma aérea en crudo de una casa sobre la avenida'},
+  {id: 'edificio-estadio', tipo: 'Edificio', lugar: 'Cochabamba', estado: 'crudo', precio: 150, dura: '0:30', alt: 'Toma aérea en crudo de un edificio junto al estadio'},
 ];
 
 // Fotos aéreas sin edición que pasan de fondo en el inicio (media/inicio). Sin GPS ni retoque.
@@ -56,6 +61,7 @@ export const MARCAS = [
   {nombre: 'Inmobiliaria Urkupiña', logo: 'urkupina.png'},
   {nombre: 'Club Always Ready', logo: 'car.png'},
   {nombre: 'Alfa Home', logo: 'alfa-home.png'},
+  {nombre: 'Inmobiliaria Reale', logo: 'reale.png'},
 ];
 
 export const RAMAS = [

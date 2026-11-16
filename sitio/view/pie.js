@@ -1,4 +1,4 @@
-import {LOGO, ICONOS} from './iconos.js?v=202611121320';
+import {LOGO, ICONOS} from './iconos.js?v=202611160207';
 
 // Cierre con llamada a la acción y barra animada con «API · Contáctanos · número».
 export const Pie = (telefono) => {
