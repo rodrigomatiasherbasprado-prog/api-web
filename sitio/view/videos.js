@@ -1,5 +1,5 @@
-import {ICONOS} from './iconos.js?v=202611160207';
-import {bs, nombreEstado, ruta, tituloVideo} from '../logic/util.js?v=202611160207';
+import {ICONOS} from './iconos.js?v=202611181049';
+import {bs, nombreEstado, ruta, tituloVideo} from '../logic/util.js?v=202611181049';
 
 // Pestañas: Todos · Editado · Sin editar. Cada una explica qué incluye y cuánto cuesta.
 export const Videos = () => `

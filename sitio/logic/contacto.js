@@ -1,6 +1,6 @@
 // Todos los botones de contacto abren WhatsApp con un mensaje que dice de dónde viene.
-import {CONFIG, PRECIOS, VIDEOS} from './datos.js?v=202611160207';
-import {enlaceWhatsapp, mensajePlan, mensajeVideo} from './util.js?v=202611160207';
+import {CONFIG, PRECIOS, VIDEOS} from './datos.js?v=202611181049';
+import {enlaceWhatsapp, mensajePlan, mensajeVideo} from './util.js?v=202611181049';
 
 function preparar(a, mensaje) {
   a.href = enlaceWhatsapp(mensaje);

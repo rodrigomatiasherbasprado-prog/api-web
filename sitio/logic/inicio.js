@@ -1,6 +1,6 @@
 // Inicio: fotos aéreas de fondo que se funden y palabra del titular que cambia.
-import {FONDO_INICIO, PALABRAS} from './datos.js?v=202611160207';
-import {sinMovimiento} from './util.js?v=202611160207';
+import {FONDO_INICIO, PALABRAS} from './datos.js?v=202611181049';
+import {sinMovimiento} from './util.js?v=202611181049';
 
 export function iniciarInicio() {
   const fondo = document.querySelector('[data-fondo]');
