@@ -26,5 +26,8 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: sitio
+      # GitHub tarda unos segundos en listar el paquete recién subido; sin esta espera la publicación puede fallar.
+      - name: Esperar a que el paquete esté disponible
+        run: sleep 30
       - id: despliegue
         uses: actions/deploy-pages@v4
