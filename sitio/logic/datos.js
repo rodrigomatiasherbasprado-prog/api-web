@@ -33,7 +33,7 @@ export const PRECIOS = [
 ];
 export const PAGO = '50 % para agendar y 50 % después de la grabación.';
 
-// Videos. estado: 'editado' o 'crudo'. precio: el del paquete que muestra.
+// Videos. estado: 'editado', 'crudo' o 'ia' (hecho con IA: sin precio y solo en «Todos»). precio: el del paquete que muestra.
 // Archivos en media/videos, media/loops y media/posters con el mismo id (los prepara preparar_media.sh).
 export const VIDEOS = [
   {id: 'sirpita', tipo: 'Lote', lugar: 'Sirpita, Tiquipaya', estado: 'editado', precio: 300, dura: '1:10', alt: 'Toma aérea de lotes con su contorno marcado'},
@@ -47,6 +47,10 @@ export const VIDEOS = [
   {id: 'quillacollo-crudo', tipo: 'Lote', lugar: 'Quillacollo', estado: 'crudo', precio: 150, dura: '1:39', alt: 'Toma aérea en crudo de unos lotes entre casas'},
   {id: 'reale-crudo', tipo: 'Casa', lugar: 'Av. Blanco Galindo', estado: 'crudo', precio: 150, dura: '0:56', alt: 'Toma aérea en crudo de una casa sobre la avenida'},
   {id: 'edificio-estadio', tipo: 'Edificio', lugar: 'Cochabamba', estado: 'crudo', precio: 150, dura: '0:30', alt: 'Toma aérea en crudo de un edificio junto al estadio'},
+  {id: 'rafael-pabon', tipo: 'Casa', lugar: 'Rafael Pabón, Quillacollo', estado: 'editado', precio: 300, dura: '1:21', alt: 'Toma aérea de una casa con su terreno marcado'},
+  {id: 'vanguardia', tipo: 'Casa', lugar: 'Calle Fortín Vanguardia', estado: 'editado', precio: 300, dura: '0:51', alt: 'Toma aérea de una casa con 418 metros cuadrados de terreno'},
+  {id: 'santos-dumont', tipo: 'Casa', lugar: 'Santos Dumont, Santa Cruz', estado: 'editado', precio: 300, dura: '0:51', alt: 'Toma aérea de una casa comercial con su superficie marcada'},
+  {id: 'banda-roja', tipo: 'Partido', lugar: 'Always Ready', estado: 'ia', dura: '0:12', alt: 'Video hecho con IA: vuelo sobre un estadio con el anuncio de un partido'},
 ];
 
 // Fotos aéreas sin edición que pasan de fondo en el inicio (media/inicio). Sin GPS ni retoque.

@@ -1,4 +1,4 @@
-import {LOGO, ICONOS} from './iconos.js?v=202611181049';
+import {LOGO, ICONOS} from './iconos.js?v=202611240009';
 
 export const Cabecera = () => `
 <header class="cabecera" data-cabecera>

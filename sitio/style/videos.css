@@ -25,6 +25,7 @@
 .tarjeta-marco::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 52%, rgba(0,0,0,0.85) 100%); pointer-events: none; }
 .insignia { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
 .insignia-editado { background: var(--blanco); color: var(--negro); }
+.insignia-ia { background: var(--negro); color: var(--blanco); border: 1px solid rgba(255,255,255,0.4); }
 .insignia-crudo { background: rgba(0,0,0,0.55); color: var(--blanco); border: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .tarjeta-play { position: absolute; top: 50%; left: 50%; z-index: 1; width: 60px; height: 60px; margin: -30px 0 0 -30px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform 0.35s var(--suave), background 0.3s; }
 .tarjeta-play .ico { width: 18px; height: 18px; margin-left: 3px; }

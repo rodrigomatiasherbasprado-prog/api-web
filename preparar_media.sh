@@ -44,6 +44,10 @@ reale|proyectos/reale-2026-11-14-casa-blanco-galindo/entrega/casa-blanco-galindo
 quillacollo-crudo|motion/public/produccion/quillacollo/crudo.mp4|8|9
 reale-crudo|motion/public/produccion/reale/crudo.mp4|6|8
 edificio-estadio|motion/public/agencia-diego/aereo.mp4|2|3
+rafael-pabon|proyectos/oscar-urkupina-2026-11-21-casa-como-lote/entrega/casa-rafael-pabon_v7.mp4|28|31
+vanguardia|proyectos/grace-2026-11-21-casa-vanguardia/entrega/casa-vanguardia_v2.mp4|2|6.5
+santos-dumont|proyectos/rox-2026-11-21-casa-santos-dumont/trabajo/web/casa-santos-dumont_v6_sin-contacto.mp4|1|3.6
+banda-roja|brutos/always-ready/web/hoy-juega-capcut.mp4|0.5|3.2
 '
 
 echo "$LISTA" | while IFS='|' read -r id src loop poster; do

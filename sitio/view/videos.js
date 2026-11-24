@@ -1,5 +1,5 @@
-import {ICONOS} from './iconos.js?v=202611181049';
-import {bs, nombreEstado, ruta, tituloVideo} from '../logic/util.js?v=202611181049';
+import {ICONOS} from './iconos.js?v=202611240009';
+import {bs, kickerVideo, nombreEstado, ruta, tituloVideo} from '../logic/util.js?v=202611240009';
 
 // Pestañas: Todos · Editado · Sin editar. Cada una explica qué incluye y cuánto cuesta.
 export const Videos = () => `
@@ -48,13 +48,13 @@ export const Tarjeta = (v, i) => `
     <span class="insignia insignia-${v.estado}">${nombreEstado(v.estado)}</span>
     <span class="tarjeta-play">${ICONOS.play}</span>
     <span class="tarjeta-pie">
-      <span class="tarjeta-kicker">Video de DRONE · ${v.dura}</span>
+      <span class="tarjeta-kicker">${kickerVideo(v)} · ${v.dura}</span>
       <span class="tarjeta-titulo">${v.tipo}</span>
       <span class="tarjeta-lugar">${v.lugar}</span>
     </span>
   </button>
   <div class="tarjeta-accion">
-    <span class="tarjeta-precio">${bs(v.precio)}</span>
+    <span class="tarjeta-precio">${v.precio ? bs(v.precio) : ''}</span>
     <a class="boton boton-negro boton-chico" data-whatsapp-video="${v.id}">${ICONOS.whatsapp}Quiero uno así</a>
   </div>
 </article>`;

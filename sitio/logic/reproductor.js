@@ -1,7 +1,7 @@
 // Reproductor a pantalla completa con flechas para pasar de video y botón de WhatsApp.
-import {PRECIOS, VIDEOS} from './datos.js?v=202611181049';
-import {bs, mensajeVideo, nombreEstado, reproducir, ruta, tituloVideo} from './util.js?v=202611181049';
-import {prepararEnlace} from './contacto.js?v=202611181049';
+import {PRECIOS, VIDEOS} from './datos.js?v=202611240009';
+import {bs, esIA, mensajeVideo, nombreEstado, reproducir, ruta, tituloVideo} from './util.js?v=202611240009';
+import {prepararEnlace} from './contacto.js?v=202611240009';
 
 let dialogo;
 let video;
@@ -9,6 +9,7 @@ let lista = VIDEOS;
 let actual = null;
 
 const textoEstado = (v) => {
+  if (esIA(v)) return 'Video creado con inteligencia artificial. No es una grabación con DRONE.';
   if (v.estado === 'crudo') return 'Video y fotos aéreas sin editar, tal como salen del DRONE.';
   const extra = v.tipo === 'Lote' ? ' Con los lotes marcados sobre la toma.' : '';
   return `Producción completa: grabación, edición con textos y gráficos, y fotos aéreas editadas.${extra}`;
@@ -28,7 +29,7 @@ export function abrirVideo(id, enLista) {
   dialogo.querySelector('.rep-titulo').textContent = tituloVideo(v);
   dialogo.querySelector('.rep-lugar').textContent = v.lugar;
   dialogo.querySelector('.rep-explica').textContent = textoEstado(v);
-  dialogo.querySelector('.rep-precio').textContent = bs(v.precio);
+  dialogo.querySelector('.rep-precio').textContent = v.precio ? bs(v.precio) : '';
   prepararEnlace(dialogo.querySelector('.rep-whatsapp'), mensajeVideo(v));
   if (!dialogo.open) dialogo.showModal();
   document.documentElement.classList.add('con-reproductor');

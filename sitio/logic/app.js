@@ -1,19 +1,19 @@
 // Arranque: pinta las vistas con los datos y conecta la lógica de cada sección.
-import {CONFIG, MARCAS, PAGO, PALABRAS, PRECIOS, RAMAS} from './datos.js?v=202611181049';
-import {Cabecera} from '../view/cabecera.js?v=202611181049';
-import {Inicio} from '../view/inicio.js?v=202611181049';
-import {Videos} from '../view/videos.js?v=202611181049';
-import {Precios} from '../view/precios.js?v=202611181049';
-import {Marcas} from '../view/marcas.js?v=202611181049';
-import {Ramas} from '../view/ramas.js?v=202611181049';
-import {Pie} from '../view/pie.js?v=202611181049';
-import {FijoMovil, Reproductor} from '../view/reproductor.js?v=202611181049';
-import {prepararContacto} from './contacto.js?v=202611181049';
-import {iniciarInicio} from './inicio.js?v=202611181049';
-import {iniciarVideos} from './videos.js?v=202611181049';
-import {iniciarReproductor} from './reproductor.js?v=202611181049';
-import {iniciarAnimaciones} from './animaciones.js?v=202611181049';
-import {iniciarMarcas} from './marcas.js?v=202611181049';
+import {CONFIG, MARCAS, PAGO, PALABRAS, PRECIOS, RAMAS} from './datos.js?v=202611240009';
+import {Cabecera} from '../view/cabecera.js?v=202611240009';
+import {Inicio} from '../view/inicio.js?v=202611240009';
+import {Videos} from '../view/videos.js?v=202611240009';
+import {Precios} from '../view/precios.js?v=202611240009';
+import {Marcas} from '../view/marcas.js?v=202611240009';
+import {Ramas} from '../view/ramas.js?v=202611240009';
+import {Pie} from '../view/pie.js?v=202611240009';
+import {FijoMovil, Reproductor} from '../view/reproductor.js?v=202611240009';
+import {prepararContacto} from './contacto.js?v=202611240009';
+import {iniciarInicio} from './inicio.js?v=202611240009';
+import {iniciarVideos} from './videos.js?v=202611240009';
+import {iniciarReproductor} from './reproductor.js?v=202611240009';
+import {iniciarAnimaciones} from './animaciones.js?v=202611240009';
+import {iniciarMarcas} from './marcas.js?v=202611240009';
 
 const app = document.querySelector('#app');
 app.innerHTML = [

@@ -1,4 +1,4 @@
-import {ICONOS} from './iconos.js?v=202611181049';
+import {ICONOS} from './iconos.js?v=202611240009';
 
 export const Reproductor = () => `
 <dialog class="reproductor" aria-label="Reproductor de video">
